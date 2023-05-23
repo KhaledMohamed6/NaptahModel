@@ -6,7 +6,7 @@ import torch
 
 app = Flask(__name__)
 
-model = AutoModelForImageClassification.from_pretrained(r'D:\Flutter\myProjects\Model')
+model = AutoModelForImageClassification.from_pretrained('../model')
 image_processor = AutoImageProcessor.from_pretrained("google/vit-base-patch16-224-in21k")
 
 @app.route('/upload_image', methods=['POST'])
